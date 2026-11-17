@@ -166,7 +166,7 @@ Captura:
 ![SKYGAMES funcionando](capturas/env.example.png)
 
 6. Resultado esperado
-
+7. 
 Con esta refactorización, SKYGAMES contará con una estructura basada en PHP que facilita la reutilización de componentes, la navegación entre secciones y la organización de la configuración del proyecto.
 
 La documentación y las capturas permitirán comprobar la ejecución local, la modularización mediante SSI, la navegación dinámica y la presencia de la plantilla de variables de entorno.
