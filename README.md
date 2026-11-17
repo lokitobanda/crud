@@ -227,11 +227,3 @@ WHERE email = 'tu_correo@ejemplo.com';
 
 
 
-### 8.5.  – Registro, login y control de acceso
-
-- `registro.php`: valida entradas, verifica que el correo no exista y guarda la contraseña con `password_hash(..., PASSWORD_BCRYPT)`.
-- `login.php`: `password_verify()`, `session_regenerate_id(true)` y datos en `$_SESSION['usuario_id']`, `['usuario_nombre']` y `['rol']`.
-- `includes/auth_guard.php`: guardián de rutas; redirige a `login.php?error=acceso_denegado` si no hay sesión y restringe por rol.
-- Páginas protegidas: `dashboard.php` (cualquier usuario autenticado), `admin_panel.php` y `admin/*` (solo `admin`).
-- `logout.php`: vacía `$_SESSION`, elimina la cookie de sesión y ejecuta `session_destroy()`.
-- La cookie de sesión es `HttpOnly`, `SameSite=Lax` y se usa el modo estricto de sesiones.
